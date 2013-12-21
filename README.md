@@ -1,6 +1,6 @@
 # connect-mongo-session-store
 
-## An implementation of  connect session with MongoDb.
+## An implementation of  connect session store with MongoDb.
     * It also supports passport authentication automatically.
     * Specified https://github.com/senchalabs/connect/blob/master/lib/middleware/session/store.js
 
@@ -10,19 +10,18 @@
 
 ## Usage
 
-  var express = require('express'),
+    var express = require('express'),
     sessionStore = require("connect-mongo-session-store")(express),
     app = express(),
-      server = http.createServer(app),
-      sessionStore = new sessionStore({
+    server = http.createServer(app),
+    sessionStore = new sessionStore({
         host: 'localhost',
         port: 27017,
         db: 'mydb',
         stringify: false,
         maxAge: 60 * 60 * 1000,
         autoRemoveExpiredSession: true
-      });
-
+    });
     app.use(express.session({
         secret: 'mlpi',
         key: 'mlpi.sid',
@@ -34,9 +33,6 @@
         },
         store: sessionStore
     }));
-
-
-
 
 
 ## Credits
