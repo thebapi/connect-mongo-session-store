@@ -10,10 +10,10 @@
 
 ## Usage
 
-  var express = require('express'),
-    sessionStore = require("connect-mongo-session-store")(express);
 
-    var app = express(),
+  var express = require('express'),
+    sessionStore = require("connect-mongo-session-store")(express),
+    app = express(),
       server = http.createServer(app),
       sessionStore = new sessionStore({
         host: 'localhost',
