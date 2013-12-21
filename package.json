@@ -1,0 +1,27 @@
+{
+  "name": "connect-mongo-session-store",
+  "version": "0.0.1",
+  "description": "An implementation of  connect session store with MongoDb. It also support passport authentication automatically.",
+  "keywords": [
+    "connect",
+    "mongo",
+    "mongodb",
+    "session",
+    "express",
+    "passport",
+    "pasportjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thebapi/connect-mongo-session-store.git"
+  },
+  "author": {
+    "name": "Sajib Sarkar",
+    "email": "thebapi@gmail.com"
+  },
+  "dependencies": {
+    "mongolian": "0.1.x"
+  },
+  "main": "index",
+  "engines": "node >= 0.4.x"
+}
