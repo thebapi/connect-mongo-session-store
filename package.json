@@ -1,12 +1,11 @@
 {
   "name": "mongo-rest-query",
   "version": "0.0.1",
-  "description": "Rest url query to mongo",
+  "description": "Rest url query to mongo criteria.",
   "keywords": [
-    "node",
-    "acl",
-    "node acl",
-    "authentication"
+    "mongo",
+    "query",
+    "rest"
   ],
   "repository": {
     "type": "git",
@@ -17,5 +16,18 @@
     "email": "thebapi@gmail.com"
   },
   "main": "index",
-  "engines": "node >= 0.4.x"
+  "engines": "node >= 0.4.x",
+  "scripts": {
+    "test": "grunt"
+  },
+  "devDependencies": {
+    "grunt-mocha-test": "~0.9.0",
+    "grunt": "~0.4.1",
+    "should": "~3.1.2",
+    "expect.js": "~0.2.0"
+  },
+  "dependencies": {
+    "underscore": "~1.6.0",
+    "jsonify": "0.0.0"
+  }
 }
