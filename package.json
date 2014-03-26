@@ -1,6 +1,6 @@
 {
   "name": "connect-mongo-session-store",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An implementation of  connect session store with MongoDB. It also support passport authentication automatically.",
   "keywords": [
     "connect",
