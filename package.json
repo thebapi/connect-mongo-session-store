@@ -1,33 +1,35 @@
 {
-  "name": "mongo-rest-query",
-  "version": "0.0.1",
-  "description": "Rest url query to mongo criteria.",
+  "name": "connect-mongo-session-store",
+  "version": "0.0.2",
+  "description": "An implementation of  connect session store with MongoDB. It also support passport authentication automatically.",
   "keywords": [
+    "connect",
     "mongo",
-    "query",
-    "rest"
+    "mongodb",
+    "session",
+    "express",
+    "passport",
+    "pasportjs"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/thebapi/mongo-rest-query.git"
+    "url": "https://github.com/thebapi/connect-mongo-session-store.git"
   },
   "author": {
     "name": "Sajib Sarkar",
     "email": "thebapi@gmail.com"
   },
+  "dependencies": {
+    "mongolian": "0.1.x"
+  },
   "main": "index",
   "engines": "node >= 0.4.x",
-  "scripts": {
-    "test": "grunt"
+  "readme": "# connect-mongo-session-store\n\n## An implementation of connect session store with MongoDb.\n    * It also support passport authentication automatically.\n    * Specified https://github.com/senchalabs/connect/blob/master/lib/middleware/session/store.js\n\n## Installation\n\n    $ npm install connect-mongo-session-store\n\n## Usage\n\n    var express = require('express'),\n    sessionStore = require(\"connect-mongo-session-store\")(express),\n    app = express(),\n    server = http.createServer(app),\n    sessionStore = new sessionStore({\n        host: 'localhost',\n        port: 27017,\n        db: 'mydb',\n        stringify: false,\n        maxAge: 60 * 60 * 1000,\n        autoRemoveExpiredSession: true\n    });\n    app.use(express.session({\n        secret: 'mlpi',\n        key: 'mlpi.sid',\n        cookie: {\n          path: '/',\n          domain: '',\n          httpOnly: true,\n          maxAge: 60 * 60 * 1000\n        },\n        store: sessionStore\n    }));\n\n\n## Credits\n\n  - [Sajib Sarkar](http://github.com/thebapi)\n\n## License\n\nThe MIT License (MIT)\n\nCopyright (c) 2013 Sajib Sarkar\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the \"Software\"), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software is furnished to do so,\nsubject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\nFOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER\nIN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\nCONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/thebapi/connect-mongo-session-store/issues"
   },
-  "devDependencies": {
-    "grunt-mocha-test": "~0.9.0",
-    "grunt": "~0.4.1",
-    "should": "~3.1.2",
-    "expect.js": "~0.2.0"
-  },
-  "dependencies": {
-    "underscore": "~1.6.0",
-    "jsonify": "0.0.0"
-  }
+  "homepage": "https://github.com/thebapi/connect-mongo-session-store",
+  "_id": "connect-mongo-session-store@0.0.1",
+  "_from": "connect-mongo-session-store@~0.0.1"
 }
