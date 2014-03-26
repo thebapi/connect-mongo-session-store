@@ -1,5 +1,5 @@
 .idea
-mongo-rest-query.iml
+connect-mongo-session-store.iml
 npm-debug.log
 node_modules
 .DS_Store
